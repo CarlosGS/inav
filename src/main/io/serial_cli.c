@@ -765,6 +765,7 @@ const clivalue_t valueTable[] = {
     { "tri_unarmed_servo",          VAR_INT8   | MASTER_VALUE | MODE_LOOKUP, &masterConfig.mixerConfig.tri_unarmed_servo, .config.lookup = { TABLE_OFF_ON }, 0 },
     { "servo_lowpass_freq",         VAR_INT16  | MASTER_VALUE, &masterConfig.mixerConfig.servo_lowpass_freq, .config.minmax = { 10,  400}, 0 },
     { "servo_lowpass_enable",       VAR_INT8   | MASTER_VALUE | MODE_LOOKUP, &masterConfig.mixerConfig.servo_lowpass_enable, .config.lookup = { TABLE_OFF_ON }, 0 },
+    { "fw_iterm_throw_limit",       VAR_INT16  | PROFILE_VALUE, &masterConfig.profile[0].pidProfile.fixedWingItermThrowLimit, .config.minmax = { FW_ITERM_THROW_LIMIT_MIN,  FW_ITERM_THROW_LIMIT_MAX}, 0 },
 #endif
 
     { "mode_range_logic_operator",  VAR_UINT8  | PROFILE_VALUE | MODE_LOOKUP,  &masterConfig.profile[0].modeActivationOperator, .config.lookup = { TABLE_AUX_OPERATOR }, 0 },
